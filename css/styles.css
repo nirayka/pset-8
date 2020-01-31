@@ -46,7 +46,8 @@ h2 {
 
 
 .square {
-  border: 1px solid rgb(7, 44, 41);
+  border: 1px solid;
+  border-color: #082828;
   font-size: 96px;
   height: 150px;
   line-height: 150px;

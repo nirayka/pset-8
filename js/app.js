@@ -42,7 +42,7 @@ function render() {
     squares[index].textContent = mark;
   })
 
-  message.textContent = `turn: ${turn}`;
+  message.textContent = win ? `${win} wins!` : `turn: ${turn}`;
 }
 
 function takeTurn(e) {
@@ -52,20 +52,27 @@ function takeTurn(e) {
 
   board[index] = turn;
   turn = turn === "x" ? "o" : "x";
+  win = getWinner();
 
   render();
+}
 
 function getWinner() {
   let winner = null;
-  winningConditions.forEach(functions(condition, index) {
+
+  winningConditions.forEach(function(condition, index) {
     if (
       board[condition[0]] &&
       board[condition[0]] === board[condition[1]] &&
-      board[conition[1]] === board[condition[2]]
+      board[condition[1]] === board[condition[2]]
     ) {
-      winner = board[condition[0]]
-      }
-    });
-    return winner;
-  }
+      winner = board[condition[0]];
+    }
+  });
+
+  return winner;
 }
+
+
+// literally why is the winning thing not working...
+// it will say who wins at the top but it doesn't halt the game
