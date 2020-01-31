@@ -1,20 +1,27 @@
 body {
   text-align: center;
-  font-family: "Roboto", monospace;
+  font-family: "Playfair Display", serif;
+  background-color: #DDC8A9
 }
 
 h1 {
   margin: 0 auto;
-  font-family: "Major Mono Display", monospace;
+  font-family: 'Abril Fatface', cursive;
   font-size: 48px;
   margin: 2%;
+  font-weight: 30;
+  color: #255440
 }
+
 
 h2 {
   font-size: 36px;
   font-weight: lighter;
   margin: 2%;
+  color: #366147
 }
+
+
 
 .container {
   display: flex;
@@ -22,11 +29,14 @@ h2 {
   align-items: center;
 }
 
+
+
 .column {
   height: 100%;
   width: 100%;
   flex-direction: column;
 }
+
 
 .wrap {
   flex-wrap: wrap;
@@ -34,8 +44,9 @@ h2 {
   width: 456px;
 }
 
+
 .square {
-  border: 1px solid rgba(0, 0, 0, 0.75);
+  border: 1px solid rgb(7, 44, 41);
   font-size: 96px;
   height: 150px;
   line-height: 150px;
@@ -43,15 +54,16 @@ h2 {
   width: 150px;
 }
 
+
 .square:hover {
-  background-color: lightgray;
+  background-color: #366147;
   cursor: pointer;
 }
 
 #reset-button {
-  background-color: white;
-  border: 1px solid black;
-  color: black;
+  background-color: #DDC8A9;
+  border: 1px solid #366147;
+  color: #366147;
   font-size: 21px;
   line-height: 55px;
   margin: 1%;
@@ -59,8 +71,9 @@ h2 {
   width: 456px;
 }
 
+
 #reset-button:hover {
-  background-color: black;
-  color: white;
+  background-color: #366147;
+  color: #DDC8A9;
   cursor: pointer;
 }
