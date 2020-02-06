@@ -15,7 +15,8 @@ const winningConditions = [
 let board;
 let turn;
 let win;
-
+let xWins = 0;
+let oWins = 0;
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
@@ -24,6 +25,8 @@ const message = document.querySelector("h2");
 ///////////////////// EVENT LISTENERS ///////////////////////////////
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
+document.getElementById("reset-button").onclick = init;
+
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
@@ -42,19 +45,23 @@ function render() {
     squares[index].textContent = mark;
   })
 
-  message.textContent = win ? `${win} wins!` : `turn: ${turn}`;
+  message.textContent =
+    win === "T" ? "it's a tie!" : win ? `${win} wins!` : `turn: ${turn}`;
 }
 
 function takeTurn(e) {
-  let index = squares.findIndex(function(square) {
-    return square === e.target;
-  });
+  if (!win) {
+    let index = squares.findIndex(function(square) {
+      return square === e.target;
+    });
 
-  board[index] = turn;
-  turn = turn === "x" ? "o" : "x";
-  win = getWinner();
-
-  render();
+    if (board[index] === "") {
+      board[index] = turn;
+      turn = turn === "x" ? "o" : "x";
+      win = getWinner();
+      render();
+    }
+  }
 }
 
 function getWinner() {
@@ -67,12 +74,19 @@ function getWinner() {
       board[condition[1]] === board[condition[2]]
     ) {
       winner = board[condition[0]];
+      if (winner == "x") {
+        xWins++
+        xCounter.innerHTML = xWins
+      } else if (winner == "o") {
+        oWins++
+        oCounter.innerHTML = oWins
+      }
     }
   });
 
-  return winner;
+  return winner ? winner : board.includes("") ? null : "T";
 }
 
 
-// literally why is the winning thing not working...
-// it will say who wins at the top but it doesn't halt the game
+// able to keep score
+// needs one more feature request ()

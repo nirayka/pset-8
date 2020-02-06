@@ -78,3 +78,23 @@ h2 {
   color: #DDC8A9;
   cursor: pointer;
 }
+
+table {
+  display: inline-block;
+  border-radius: 15px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table, th, td {
+
+}
+
+th, td {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 7px;
+  padding-bottom: 7px;
+  font-size: 20px;
+  color: #366147
+}
