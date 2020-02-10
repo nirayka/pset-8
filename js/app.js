@@ -63,6 +63,7 @@ function render() {
     win === "T" ? "it's a tie!" : win ? `${win} wins!` : `turn: ${turn}`;
 }
 
+
 function takeTurn(e) {
   if (!win) {
     let index = squares.findIndex(function(square) {
