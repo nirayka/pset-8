@@ -55,10 +55,6 @@ function init() {
   render();
 }
 
-
-
-
-
 function render() {
   board.forEach(function(mark, index) {
     squares[index].textContent = mark;
