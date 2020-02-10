@@ -33,12 +33,10 @@ document.getElementById("o_turn").onclick = oStarts
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function xStarts() {
   firstPlayer == 1
-  turn == "x"
 }
 
 function oStarts() {
   firstPlayer == 0
-  turn == "o"
 }
 
 function init() {
@@ -49,11 +47,9 @@ function init() {
   ]
   win = null;
   if (firstPlayer == 1) {
-    console.log("x")
     turn = "x"
   }
   else if (firstPlayer == 0) {
-    console.log("o")
     turn = "o"
   }
   render();
