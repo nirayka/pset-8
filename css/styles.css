@@ -6,7 +6,7 @@ body {
 
 h1 {
   margin: 0 auto;
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Abril Fatface';
   font-size: 48px;
   margin: 2%;
   font-weight: 30;
@@ -44,7 +44,6 @@ h2 {
   width: 456px;
 }
 
-
 .square {
   border: 1px solid;
   border-color: #082828;
@@ -55,13 +54,12 @@ h2 {
   width: 150px;
 }
 
-
 .square:hover {
   background-color: #366147;
   cursor: pointer;
 }
 
-#reset-button {
+.resetButton {
   background-color: #DDC8A9;
   border: 1px solid #366147;
   color: #366147;
@@ -72,8 +70,27 @@ h2 {
   width: 456px;
 }
 
+.resetButton:hover {
+  background-color: #366147;
+  color: #DDC8A9;
+  cursor: pointer;
+}
 
-#reset-button:hover {
+.turnButton {
+  background-color: #DDC8A9;
+  border: 1px solid #366147;
+  color: #366147;
+  font-size: 15px;
+  line-height: 30px;
+  margin: 1%;
+  text-align: center;
+  width: 200px;
+  font-family: 'Abril Fatface';
+  font-weight: lighter;
+  border-radius: 50px;
+}
+
+.turnButton:hover {
   background-color: #366147;
   color: #DDC8A9;
   cursor: pointer;
@@ -84,10 +101,6 @@ table {
   border-radius: 15px;
   border: 1px solid black;
   border-collapse: collapse;
-}
-
-table, th, td {
-
 }
 
 th, td {

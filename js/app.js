@@ -18,6 +18,7 @@ let win;
 let xWins = 0;
 let oWins = 0;
 
+
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");
@@ -26,17 +27,35 @@ const message = document.querySelector("h2");
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
-
+document.getElementById("x_turn").onclick = xStarts
+document.getElementById("o_turn").onclick = oStarts
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
+function xStarts() {
+  firstPlayer == "x"
+  turn == "x"
+}
+
+function oStarts() {
+  firstPlayer == "o"
+  turn == "o"
+}
+
 function init() {
   board = [
     "", "", "",
     "", "", "",
     "", "", "",
   ]
-  turn = "x";
   win = null;
+  if (firstPlayer == "x") {
+    console.log("x")
+    turn = "x"
+  }
+  else if (firstPlayer == "o") {
+    console.log("o")
+    turn = "o"
+  }
   render();
 }
 
