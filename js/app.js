@@ -17,7 +17,7 @@ let turn;
 let win;
 let xWins = 0;
 let oWins = 0;
-
+let firstPlayer;
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
@@ -32,12 +32,12 @@ document.getElementById("o_turn").onclick = oStarts
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function xStarts() {
-  firstPlayer == "x"
+  firstPlayer == 1
   turn == "x"
 }
 
 function oStarts() {
-  firstPlayer == "o"
+  firstPlayer == 0
   turn == "o"
 }
 
@@ -48,11 +48,11 @@ function init() {
     "", "", "",
   ]
   win = null;
-  if (firstPlayer == "x") {
+  if (firstPlayer == 1) {
     console.log("x")
     turn = "x"
   }
-  else if (firstPlayer == "o") {
+  else if (firstPlayer == 0) {
     console.log("o")
     turn = "o"
   }
