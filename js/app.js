@@ -100,7 +100,3 @@ function getWinner() {
 
   return winner ? winner : board.includes("") ? null : "T";
 }
-
-
-// able to keep score
-// needs one more feature request ()
