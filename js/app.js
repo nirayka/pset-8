@@ -69,6 +69,7 @@ function takeTurn(e) {
       return square === e.target;
     });
 
+
     if (board[index] === "") {
       board[index] = turn;
       turn = turn === "x" ? "o" : "x";
