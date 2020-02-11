@@ -59,7 +59,7 @@ h2 {
   cursor: pointer;
 }
 
-.resetButton {
+#reset-button {
   background-color: #DDC8A9;
   border: 1px solid #366147;
   color: #366147;
@@ -70,7 +70,7 @@ h2 {
   width: 456px;
 }
 
-.resetButton:hover {
+#reset-button:hover {
   background-color: #366147;
   color: #DDC8A9;
   cursor: pointer;

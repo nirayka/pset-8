@@ -31,13 +31,6 @@ document.getElementById("x_turn").onclick = xStarts
 document.getElementById("o_turn").onclick = oStarts
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
-function xStarts() {
-  firstPlayer == 1
-}
-
-function oStarts() {
-  firstPlayer == 0
-}
 
 function init() {
   board = [
@@ -45,11 +38,14 @@ function init() {
     "", "", "",
     "", "", "",
   ]
+  turn = "x"
   win = null;
-  if (firstPlayer == 1) {
+    if (turnCount == 1) {
+    console.log("x")
     turn = "x"
   }
-  else if (firstPlayer == 0) {
+  else if (turnCount == 0) {
+    console.log("o")
     turn = "o"
   }
   render();
@@ -99,4 +95,14 @@ function getWinner() {
   });
 
   return winner ? winner : board.includes("") ? null : "T";
+}
+
+function xStarts() {
+  turn_counter = 1
+  console.log("1")
+}
+
+function oStars() {
+  turn_counter = 0
+  console.log("0")
 }
