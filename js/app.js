@@ -27,8 +27,8 @@ const message = document.querySelector("h2");
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
-document.getElementById("x_turn").onclick = xStarts
-document.getElementById("o_turn").onclick = oStarts
+document.getElementById("x_turn").onclick = xStarts;
+document.getElementById("o_turn").onclick = oStarts;
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 
